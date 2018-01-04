@@ -48,7 +48,7 @@ export function reducer(
       };
     }
 
-    case fromPizzas.LOAD_PIZZAS: {
+    case fromPizzas.LOAD_PIZZAS_FAIL: {
       return {
         ...state,
         loading: false,
@@ -56,6 +56,7 @@ export function reducer(
       };
     }
 
+    case fromPizzas.UPDATE_PIZZA_SUCCESS:
     case fromPizzas.CREATE_PIZZA_SUCCESS: {
       const pizza = action.payload;
       const entities = {
