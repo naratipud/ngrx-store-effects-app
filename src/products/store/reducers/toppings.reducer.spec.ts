@@ -112,12 +112,21 @@ describe('ToppingsReducer Selectors', () => {
   });
 
   describe('getSelectedToppings', () => {
-    it('should return .selectedToppings', () => {
+    it('should return initial .selectedToppings', () => {
       const { initialState } = fromToppings;
       const previousState = { ...initialState };
       const slice = fromToppings.getSelectedToppings(previousState);
 
       expect(slice).toEqual([]);
+    });
+
+    it('should return .selectedToppings', () => {
+      const selectedToppings = [1, 2, 3, 4, 5];
+      const { initialState } = fromToppings;
+      const previousState = { ...initialState, selectedToppings };
+      const slice = fromToppings.getSelectedToppings(previousState);
+
+      expect(slice).toEqual(selectedToppings);
     });
   });
 });

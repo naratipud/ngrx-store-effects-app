@@ -134,7 +134,7 @@ describe('PizzasReducer', () => {
 
 describe('PizzasReducer Selectors', () => {
   describe('getPizzasEntities', () => {
-    it('should reuturn .entities', () => {
+    it('should return .entities', () => {
       const entities: { [key: number]: Pizza } = {
         1: { id: 1, name: 'Pizza #1', toppings: [] },
         2: { id: 2, name: 'Pizza #2', toppings: [] }
@@ -149,7 +149,7 @@ describe('PizzasReducer Selectors', () => {
   });
 
   describe('getPizzasLoading', () => {
-    it('should reuturn .loading', () => {
+    it('should return .loading', () => {
       const { initialState } = fromPizzas;
       const previousState = { ...initialState, loading: true };
       const slice = fromPizzas.getPizzasLoading(previousState);
@@ -159,7 +159,7 @@ describe('PizzasReducer Selectors', () => {
   });
 
   describe('getPizzasLoaded', () => {
-    it('should reuturn .loaded', () => {
+    it('should return .loaded', () => {
       const { initialState } = fromPizzas;
       const previousState = { ...initialState, loaded: true };
       const slice = fromPizzas.getPizzasLoaded(previousState);
