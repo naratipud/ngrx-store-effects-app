@@ -4,7 +4,7 @@ import { of } from 'rxjs/observable/of';
 import { catchError, map, switchMap } from 'rxjs/operators';
 
 import * as fromServices from '../../services/toppings.service';
-import * as toppingsActions from '../actions/toppings.action';
+import * as toppingsActions from '../actions/toppings.actions';
 
 @Injectable()
 export class ToppingsEffects {

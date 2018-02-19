@@ -5,10 +5,10 @@ import { catchError, map, switchMap } from 'rxjs/operators';
 
 import * as fromRoot from '../../../app/store';
 import * as fromServices from '../../services';
-import * as pizzaActions from '../actions/pizzas.action';
+import * as pizzaActions from '../actions/pizzas.actions';
 
 @Injectable()
-export class PizzasEffect {
+export class PizzasEffects {
   constructor(
     private actions$: Actions,
     private pizzaService: fromServices.PizzasService

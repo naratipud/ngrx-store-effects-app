@@ -1,5 +1,5 @@
 import { Topping } from '../../models/topping.model';
-import * as fromActions from '../actions/toppings.action';
+import * as fromActions from '../actions/toppings.actions';
 import * as fromToppings from './toppings.reducer';
 
 describe('ToppingsReducer', () => {

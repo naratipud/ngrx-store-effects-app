@@ -1,5 +1,5 @@
 import { Pizza } from '../../models/pizza.model';
-import * as fromActions from '../actions/pizzas.action';
+import * as fromActions from '../actions/pizzas.actions';
 import * as fromPizzas from './pizzas.reducer';
 
 describe('PizzasReducer', () => {

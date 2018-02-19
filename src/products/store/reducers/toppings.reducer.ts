@@ -1,5 +1,5 @@
 import { Topping } from '../../models/topping.model';
-import * as fromToppings from '../actions/toppings.action';
+import * as fromToppings from '../actions/toppings.actions';
 
 export interface ToppingsState {
   entities: { [id: number]: Topping };

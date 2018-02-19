@@ -1,4 +1,4 @@
-import * as fromPizzas from './pizzas.action';
+import * as fromPizzas from './pizzas.actions';
 
 describe('Pizzas Actions', () => {
   describe('LoadPizzas Actions', () => {

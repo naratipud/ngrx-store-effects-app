@@ -7,8 +7,8 @@ import { empty } from 'rxjs/observable/empty';
 import { of } from 'rxjs/observable/of';
 
 import { ToppingsService } from '../../services';
-import * as fromActions from '../actions/toppings.action';
-import * as fromEffects from './toppings.effect';
+import * as fromActions from '../actions/toppings.actions';
+import * as fromEffects from './toppings.effects';
 
 export class TestActions extends Actions {
   constructor() {

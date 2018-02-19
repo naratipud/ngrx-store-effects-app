@@ -7,8 +7,8 @@ import { empty } from 'rxjs/observable/empty';
 import { of } from 'rxjs/observable/of';
 
 import { PizzasService } from '../../services';
-import * as fromActions from '../actions/pizzas.action';
-import * as fromEffects from './pizzas.effect';
+import * as fromActions from '../actions/pizzas.actions';
+import * as fromEffects from './pizzas.effects';
 
 export class TestActions extends Actions {
   constructor() {
@@ -27,7 +27,7 @@ export function getActions() {
 describe('PizzasEffects', () => {
   let actions$: TestActions;
   let service: PizzasService;
-  let effects: fromEffects.PizzasEffect;
+  let effects: fromEffects.PizzasEffects;
 
   const pizzas = [
     {
@@ -55,14 +55,14 @@ describe('PizzasEffects', () => {
       imports: [HttpClientTestingModule],
       providers: [
         PizzasService,
-        fromEffects.PizzasEffect,
+        fromEffects.PizzasEffects,
         { provide: Actions, useFactory: getActions }
       ]
     });
 
     actions$ = TestBed.get(Actions);
     service = TestBed.get(PizzasService);
-    effects = TestBed.get(fromEffects.PizzasEffect);
+    effects = TestBed.get(fromEffects.PizzasEffects);
 
     spyOn(service, 'getPizzas').and.returnValue(of(pizzas));
     spyOn(service, 'createPizza').and.returnValue(of(pizzas[0]));
